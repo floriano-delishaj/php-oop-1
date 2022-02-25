@@ -19,19 +19,15 @@
         <div class="container">
             <h1 class="text-center pt-5">Movies</h1>
             <div class="row pt-4 justify-content-center">
-                <div class="col-5">
-                    <div class="card-box p-4">
-                        <img src="<?php echo $fastAndFurious->poster ?>" alt="">
-                        <?php echo $fastAndFurious->printMovie() ?>
-                    </div>
-                </div>
-
-                <div class="col-5">
-                    <div class="card-box p-4">
-                        <img src="<?php echo $harryPotter->poster ?>" alt="">
-                        <?php echo $harryPotter->printMovie() ?>
-                    </div>
-                </div>
+                <?php foreach ($movies as $movie) {
+                    echo "<div class='col-5'>";
+                    echo "<div class='card-box p-4'>";
+                    echo "<img src='" . $movie->poster . "' alt=''>";
+                    echo  $movie->printMovie();
+                    echo "</div>";
+                    echo "</div>";
+                }
+                ?>
             </div>
         </div>
     </div>
