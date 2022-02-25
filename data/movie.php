@@ -42,7 +42,7 @@ class Movie
         echo "<h5 class='pt-2'>" . ucfirst($this->genre) . "</h5>";
         echo "<p class='text-center pt-3'>" . ucfirst($this->desc) . "</p>";
         echo "<div>";
-        for ($i = 0; $i <=5; $i++) {
+        for ($i = 0; $i <5; $i++) {
             if($i <= $this->star()) {
                 echo "<i class='fas fa-star'></i>";
             } else {
